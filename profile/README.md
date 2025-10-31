@@ -1,4 +1,4 @@
-# OpenPath Robotics GitHub Organization 운영 매뉴얼 (v1.0)
+# OpenPath Robotics GitHub Organization
 
 > 회사용 GitHub Organization을 안정적이고 일관되게 운영하기 위한 **레포 네이밍·브랜치·권한·문서화·자동화** 원칙을 정리했습니다. 필요시 회사 실정에 맞게 커스터마이즈하세요.
 
@@ -7,13 +7,11 @@
 ## 0) 빠른 시작 체크리스트
 
 * [ ] Organization 2FA 필수화
-* [ ] 팀(Teams) 생성 및 최소권한(Least Privilege) 적용
-* [ ] 기본 템플릿 리포(`org-templates`) 생성
-* [ ] 기본 이슈/PR 템플릿·라벨 세트·CODEOWNERS 배포
+      조직의 모든 구성원이 GitHub 로그인 시, 비밀번호 외에 인증앱(예: Authy, Google Authenticator) 등을 이용해 2단계 인증(2FA) 을 반드시 거치도록 강제하는 설정입니다.
 * [ ] 보호 브랜치(`main`) 정책 적용 & 필수 리뷰 1+ 설정
-* [ ] GitHub Actions: Lint/Test/Build CI 파이프라인
-* [ ] Dependabot & Secret Scanning 활성화
+      main 브랜치를 실수로 덮어쓰거나 테스트 안 된 코드를 병합하지 못하도록 보호(Protected) 설정을 적용합니다.
 * [ ] 저장소 네이밍 규칙 공지 및 준수 모니터링
+      Organization 내 모든 리포지토리가 동일한 이름 규칙(예: <team>-<project>) 을 따르도록 규정하고, 이를 주기적으로 점검하는 것을 의미합니다.
 
 ---
 
@@ -82,7 +80,6 @@ refactor/mpc-loop
 
 **원칙**
 
-* **Team 단위**로 권한 부여 (개별 인원 권한 지양)
 * 외부 협력사는 **Read/Triage**까지만
 * Organization 레벨 **2FA Mandatory**
 * 중요 리포는 내부 전용(Private) 기본, 공개는 승인 절차
@@ -145,12 +142,3 @@ chore: bump dependencies
 * 본문: **배경/변경사항/테스트/리스크/롤백**
 * Reviewer 1명 이상, 라벨 지정(`enhancement`, `bug`, `breaking`, `urgent`)
 * 스크린샷/로그/성능 수치 첨부 권장
-
----
-
-## 6) 이슈 라벨 세트 (추천)
-
-* 타입: `bug`, `enhancement`, `docs`, `refactor`, `chore`, `test`
-* 우선순위: `P0`, `P1`, `P2`
-* 상태: `needs-info`, `blocked`, `in-review`
-* 영향: `breaking-change`, `security`, `performance`
