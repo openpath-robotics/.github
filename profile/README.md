@@ -1,7 +1,5 @@
 # OpenPath Robotics GitHub Organization
 
-> 회사용 GitHub Organization을 안정적이고 일관되게 운영하기 위한 **레포 네이밍·브랜치·권한·문서화·자동화** 원칙을 정리했습니다. 필요시 회사 실정에 맞게 커스터마이즈하세요.
-
 ---
 
 ## 0) 빠른 시작 체크리스트
